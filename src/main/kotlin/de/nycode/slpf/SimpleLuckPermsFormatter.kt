@@ -15,17 +15,13 @@ import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
-import org.bukkit.event.EventPriority
 import org.bukkit.event.Listener
-import org.bukkit.event.player.AsyncPlayerChatEvent
 import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.plugin.java.JavaPlugin
 
 class SimpleLuckPermsFormatter : JavaPlugin(), Listener {
 
     private lateinit var luckPerms: LuckPerms
-    private lateinit var chatFormat: String
-    private var useColorInsteadOfPrefix: Boolean = true
 
     override fun onEnable() {
         luckPerms = loadLuckPerms() ?: error("Unable to load the LuckPerms API")
@@ -45,8 +41,6 @@ class SimpleLuckPermsFormatter : JavaPlugin(), Listener {
 
         saveDefaultConfig()
         reloadConfig()
-        chatFormat = config.getString("chat-format") ?: "{username}: &7{message}"
-        useColorInsteadOfPrefix = config.getBoolean("chat-use-color-instead-of-prefix")
     }
 
     private fun Player.updateScoreboard() {

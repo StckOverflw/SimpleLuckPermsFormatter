@@ -1,6 +1,6 @@
 plugins {
-    kotlin("jvm") version "1.6.21"
-    id("io.papermc.paperweight.userdev") version "1.3.3"
+    kotlin("jvm") version "1.7.0"
+    id("io.papermc.paperweight.userdev") version "1.3.7"
 }
 
 group = "de.nycode"
@@ -18,7 +18,7 @@ dependencies {
 
 kotlin {
     jvmToolchain {
-        (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of(17))
+        this.languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
 

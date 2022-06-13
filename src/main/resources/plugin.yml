@@ -1,7 +1,7 @@
 name: SimpleLuckPermsFormatter
 main: de.nycode.slpf.SimpleLuckPermsFormatter
 version: 1.1.0
-api-version: 1.18
+api-version: 1.19
 authors:
   - NyCode
   - StckOverflw
@@ -9,5 +9,5 @@ website: https://github.com/NyCodeGHG/SimpleLuckPermsFormatter
 depend:
   - LuckPerms
 libraries:
-  - "org.jetbrains.kotlin:kotlin-stdlib:1.6.21"
+  - "org.jetbrains.kotlin:kotlin-stdlib:1.7.20"
   - "com.mojang:brigadier:1.0.18"
